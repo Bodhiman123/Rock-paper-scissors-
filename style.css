@@ -1,0 +1,127 @@
+/* Dark theme setup */
+:root {
+    --bg-color: #1a0505; /* From your portfolio */
+    --card-color: #2a1a1a;
+    --accent-color: #ff4747; /* From your portfolio */
+    --text-color: #f5f5f5;
+    --win-glow: #00ff00;
+    --lose-glow: #ff0000;
+    --draw-glow: #888888;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Scoreboard styling */
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.score h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+.score p {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-color-alt);
+    margin-top: 5px;
+}
+
+/* Game Arena (Player vs Computer) */
+.game-arena {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.vs {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.choice-box {
+    width: 150px;
+    height: 150px;
+    background-color: var(--card-color);
+    border: 3px solid var(--accent-color);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem; /* For the emoji */
+    transition: all 0.3s ease;
+}
+
+/* Choice Buttons (Rock, Paper, Scissors) */
+.choices {
+    margin-top: 20px;
+}
+
+.choice-btn {
+    width: 100px;
+    height: 100px;
+    font-size: 3rem; /* Emoji size */
+    margin: 0 15px;
+    border: 3px solid var(--accent-color);
+    border-radius: 50%; /* Makes them round */
+    background-color: var(--card-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.choice-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--accent-color);
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+/* Result Text */
+#result-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    height: 3rem; /* Reserve space so layout doesn't jump */
+}
+
+/* --- ANIMATION/GLOW CLASSES (Added by JS) --- */
+.winner {
+    box-shadow: 0 0 30px 5px var(--win-glow);
+    border-color: var(--win-glow);
+}
+
+.loser {
+    box-shadow: 0 0 30px 5px var(--lose-glow);
+    border-color: var(--lose-glow);
+}
+
+.draw {
+    box-shadow: 0 0 30px 5px var(--draw-glow);
+    border-color: var(--draw-glow);
+}
